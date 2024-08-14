@@ -6,6 +6,9 @@ tailwind.config={
             },
             colors:{
                 darkTheme: '#1a012e',
+            },
+            backgroundImage: {
+                'hero': "url('../images/work-1.png')",
             }
         }
     },
