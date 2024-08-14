@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omkar Kallekar - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+
+</head>
+
+<body class="overflow-x-hidden ">
+    <nav data-aos="fade-up" class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+        <a href="home" class="text-2xl w-28 cursor-pointer mr-14 font-bold">omkar<span
+                class="text-indigo-700 font-black text-2xl">.</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 shadow-sm bg-white bg-opacity-50">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <!-- <button onclick="toggleTheme()"><img src="./images/moon_icon.png" alt="" class="w-6"></button> -->
+
+            <a href="./images/Resume - Omkar Kallekar (1).pdf" download
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4">My
+                Resume
+                <img src="./images/download-icon.png" alt="" class="w-3">
+            </a>
+
+            <button class="block md:hidden ml-3 w-6" onclick="openMenu()"><img src="./images/menu-black.png"
+                    alt=""></button>
+        </div>
+        <!--! --- MOBILE MENU --- -->
+        <ul data-aos="fade-right" id="sideMenu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500">
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <img src="./images/close-black.png" class="w-5 cursor-pointer">
+            </div>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#aboutMe" onclick="closeMenu()">About Me</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!--? header section  -->
+    <section id="home" data-aos="fade-down"
+        class="w-11/12 max-w-3xl  text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 ">
+        <img src="./images/profile-img.jpg" alt="" class="w-40 relative -z-50">
+        <h3 class="text-xl md:text-2xl ">Hi! I'm Omkar Kallekar</h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px]" data-aos="flip-right">Frontend web developer</h1>
+        <p class="max-w-2xl mx-auto">I'm a Frontend web developer and a recent Graduate from Goa India</p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+            <a data-aos="fade-right" href="#contact"
+                class="px-10 py-3 border text-white rounded-full bg-gradient-to-r from-[#d210a8] to-[#4a85dd] text-wrap flex items-center gap-2">Contact
+                Me <img src="./images/right-arrow-white.png" alt="" class="w-4">
+            </a>
+            <a data-aos="fade-left" href="./images/Resume - Omkar Kallekar (1).pdf" download
+                class="px-10 py-3 border border-gray-500 rounded-full text-wrap flex items-center gap-2 bg-white">My
+                Resume<img src="./images/download-icon.png" alt="" class="w-4">
+            </a>
+        </div>
+    </section>
+
+    <!--? about section  -->
+    <section id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-lg" data-aos="zoom-in">Introduction</h4>
+        <h2 class="text-center text-5xl" data-aos="zoom-in">About Me</h2>
+
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto relative " data-aos="fade-right">
+                <img src="./images/profile-img.jpg" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none">
+            </div>
+            <div class="flex-1" data-aos="fade-left">
+                <p class="mb-10 max-w-2xl">
+                    My name is Omkar Kallekar, a recent graduate from S. G. Balekundri Institute of Technology,
+                    Belagavi. I am a motivated Computer Science graduate with a solid foundation in frontend
+                    development. With excellent communication, leadership, teamwork, time management, adaptability
+                    skills and a passion for photography and videography, I am eager to apply my frontend expertise to a
+                    dynamic organization within the financial services or software development sectors.
+                </p>
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <!--? languages  -->
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#a49ed78b] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+                        data-aos="flip-down">
+                        <img src="./images/code-icon.png" alt="" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Languages</h3>
+                        <p class="text-gray-600 text-sm"> C++, C, HTML, CSS, JavaScript, SQL, Python.</p>
+                    </li>
+
+                    <!--? education -->
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#a49ed78b] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+                        data-aos="flip-down">
+                        <img src="./images/edu-icon.png" alt="" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Education</h3>
+                        <p class="text-gray-600 text-sm">Bachelor of Computer Science and Engineering</p>
+                    </li>
+
+
+                    <!--? projects -->
+                    <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[#a49ed78b] hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+                        data-aos="flip-down">
+                        <img src="./images/project-icon.png" alt="" class="w-7 mt-3">
+                        <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
+                        <p class="text-gray-600 text-sm">Built several personal projects, check out here</p>
+                    </li>
+                </ul>
+
+
+                <h4 class="my-6 text-gray-600 " data-aos="flip-down">Tools I use</h4>
+                <ul class="flex items-center gap-3 sm:gap-5" data-aos="flip-down">
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                        <img src="./images/vscode.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                        <img src="./images/figma.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                        <img src="./images/git.png" alt="" class="w-5 sm:w-7">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--? projects section -->
+    <section id="projects" class="w-full px-[12%] py-10 scroll-mt-20" data-aos="zoom-in">
+        <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+        <h2 class="text-center text-5xl">Personal Projects</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+            Welcome to my web development portfolio! Discover a curated collection of projects that highlight my
+            expertise in frontend development.
+        </p>
+        <!--! projects cards  -->
+        <div class="grid grid-cols-auto my-10 gap-5">
+            <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+                data-aos="fade-right">
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+
+                    <div>
+                        <a href="https://sushi-site-nu.vercel.app/" target=”_blank”>
+                            <h2 class="font-semibold">Frontend Project</h2>
+                            <p class="text-sm text-gray-700">Web Design</p>
+                        </a>
+                    </div>
+                    <a href="https://sushi-site-nu.vercel.app/" target=”_blank”
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300">
+                        <img src="./images/send-icon.png" alt="" class="w-5">
+                    </a>
+
+                </div>
+            </div>
+            <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+                data-aos="fade-up">
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <a href="https://ecombyomkark.netlify.app" target="_blank">
+                            <h2 class="font-semibold">Ecom Website</h2>
+                            <p class="text-sm text-gray-700">ECOM</p>
+                        </a>
+                    </div>
+                    <a href="https://ecombyomkark.netlify.app" target="_blank"
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300">
+                        <img src="./images/send-icon.png" alt="" class="w-5">
+                    </a>
+                </div>
+            </div>
+            <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group"
+                data-aos="fade-left">
+                <div
+                    class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <div>
+                        <a href="https://github.com/omkaaaar" target="_blank">
+                            <h2 class="font-semibold">Other</h2>
+                            <p class="text-sm text-gray-700">GitHub</p>
+                        </a>
+                    </div>
+                    <a href="https://github.com/omkaaaar" target="_blank"
+                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300">
+                        <img src="./images/send-icon.png" alt="" class="w-5">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--? contact me  -->
+    <section id="contact" class="w-full px-[12%] py-10  scroll-mt-20  bg-no-repeat bg-[length:90%_auto] bg bg-center"
+        data-aos="zoom-in">
+        <h4 class="text-center mb-2 text-lg">Connect with Me</h4>
+        <h2 class="text-center text-5xl">Get in Touch</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+            I'd love to hear from you! If you have any job openings, comments or feedback, please contact me using the
+            form below.
+        </p>
+        <form action="" class="max-w-2xl mx-auto">
+            <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+                <input type="text" name="" placeholder="Enter Name"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white">
+                <input type="email" name="" placeholder="Enter your email"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white">
+            </div>
+            <textarea rows="6" placeholder="Enter your message"
+                class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"></textarea>
+            <button
+                class="py-3 px-8 w-max flex items-center justify-between bg-black/80 text-white rounded-full mx-auto  gap-2 hover:bg-black duration-500">Submit
+                Now <img src="./images/right-arrow-white.png" alt=""></button>
+        </form>
+    </section>
+
+
+    <!-- footer  -->
+    <section class="mt-20" data-aos="fade-up">
+        <div class="text-center">
+            <a href="home" class="text-2xl mx-auto cursor-pointer mb-2 font-bold">Omkar<span
+                    class="text-indigo-700 font-black text-2xl">.</span>
+            </a>
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <img src="./images/mail_icon.png" alt="" class="w-6">omkark6342@gmail.com
+            </div>
+        </div>
+        <div class="text-center sm:flex items-center justify-center border-t border-gray-400 mx-[10%] mt-12 py-6">
+            <p>© 2024 Omkar Kallekar. All rights reserved.</p>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        const sideBar = document.querySelector('#sideMenu')
+        function openMenu() {
+            sideBar.style.transform = 'translateX(-16rem)';
+        }
+        function closeMenu() {
+            sideBar.style.transform = 'translateX(16rem)';
+        }
+
+    </script>
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
