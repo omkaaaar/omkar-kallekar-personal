@@ -12,6 +12,14 @@
     "vite": "^5.4.0"
   },
   "dependencies": {
-    "aos": "^2.3.4"
-  }
+    "aos": "^2.3.4",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14"
+  },
+  "main": "script.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
