@@ -8,7 +8,7 @@ tailwind.config={
                 darkTheme: '#1a012e',
             },
             backgroundImage: {
-                'hero': "url('../images/work-1.png')",
+                'hero': "url('./images/work-1.png')",
             }
         }
     },
