@@ -43,7 +43,7 @@ export const personalDetails = {
   email: "omkark6342@gmail.com",
   phone: "+91 9175563878",
   location: "Taleigao, Panaji, Goa",
-  resumeUrl: "/images/Resume - Omkar Kallekar (1).pdf",
+  resumeUrl: "/images/omkar-kallekar-resume.pdf",
   socialLinks: {
     github: "https://github.com/omkaaaar",
     linkedin: "https://linkedin.com/in/omkar-kallekar",
@@ -52,29 +52,19 @@ export const personalDetails = {
 };
 
 export const skillsData = {
-  languages: ["TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3", "SQL", "C++"],
-  frameworks: [
-    "React.js",
-    "Next.js",
+  languages: ["TypeScript", "JavaScript", "SQL", "C++"],
+  frontend: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS"],
+  backendAndCloud: [
     "Node.js",
     "Express.js",
-    "Tailwind CSS",
-    "Bootstrap",
-  ],
-  cloudAndDatabases: [
-    "Google Cloud Platform (Cloud Run, Cloud Functions Gen-2)",
-    "Firestore (NoSQL)",
+    "REST APIs",
+    "Google Cloud Run",
+    "Cloud Functions",
+    "Firestore",
+    "Pub/Sub",
     "MongoDB",
-    "Google Pub/Sub",
   ],
-  toolsAndPractices: [
-    "Git & GitHub",
-    "RESTful APIs",
-    "Microservices Architecture",
-    "CI/CD Pipelines",
-    "Figma",
-    "VS Code",
-  ],
+  tools: ["Git/GitHub", "CI/CD", "Figma", "VS Code"],
 };
 
 export const experienceData: ExperienceItem[] = [
@@ -84,10 +74,10 @@ export const experienceData: ExperienceItem[] = [
     location: "Bangalore, India",
     period: "Nov 2024 – Present",
     highlights: [
-      "Engineered core modules for 'Manage My Team', an internal enterprise resource and project management platform.",
+      "Contributed to core module development for 'Manage My Team', an internal enterprise resource and project management platform.",
       "Designed and built reusable React.js and TypeScript UI component libraries supporting role-based access control (RBAC).",
       "Developed scalable Node.js and TypeScript microservices and implemented an Express.js API Gateway deployed on Google Cloud Run and App Engine.",
-      "Engineered serverless RESTful APIs using Google Cloud Functions (Gen-2) and Firestore (NoSQL) for low-latency operations.",
+      "Contributed to serverless RESTful APIs using Google Cloud Functions (Gen-2) and Firestore (NoSQL).",
     ],
   },
   {
@@ -118,9 +108,8 @@ export const projectsData: ProjectItem[] = [
     repoUrl: "https://github.com/omkaaaar",
     image: "/images/work-1.png",
     highlights: [
-      "Architected a client-side data model organizing 60+ algorithmic challenges into pattern hierarchies with difficulty ratings, recognition cues, and intuition guides.",
+      "Structured a client-side data model organizing 60+ algorithmic challenges into pattern hierarchies with difficulty ratings, recognition cues, and intuition guides.",
       "Built a modular single-page interface with real-time category filtering and mobile-responsive layout views.",
-      "Planned roadmap for migration to Next.js, TypeScript, database-backed user progress tracking, and external problem integration.",
     ],
   },
   {
@@ -128,7 +117,7 @@ export const projectsData: ProjectItem[] = [
     title: "Manage My Team Platform",
     category: "Enterprise",
     summary:
-      "An enterprise resource and project management platform engineered to coordinate staffing, project tracking, and permissions at scale.",
+      "An enterprise resource and project management platform built to coordinate staffing, project tracking, and permissions.",
     description:
       "Engineered full-stack features from reusable component libraries to serverless microservices and event-driven workflows on Google Cloud Platform.",
     stack: [
@@ -144,27 +133,8 @@ export const projectsData: ProjectItem[] = [
     image: "/images/work-2.png",
     highlights: [
       "Engineered role-based access control (RBAC) component libraries in React and TypeScript.",
-      "Implemented serverless backend services using Google Cloud Functions Gen-2 with low-latency Firestore queries.",
+      "Contributed to serverless backend services using Google Cloud Functions Gen-2 with Firestore queries.",
       "Integrated asynchronous messaging workflows using Google Pub/Sub for background tasks.",
-    ],
-  },
-  {
-    id: "ecommerce-platform",
-    title: "E-Commerce Web Application",
-    category: "Full-Stack",
-    summary:
-      "A responsive storefront featuring product catalogs, state-managed shopping carts, and a streamlined checkout flow.",
-    description:
-      "Built with a focus on client-side state predictability, clean user experience, and mobile-friendly layouts.",
-    stack: ["React", "JavaScript", "Tailwind CSS", "HTML5"],
-    role: "Creator & Developer",
-    liveUrl: "https://ecombyomkark.netlify.app",
-    repoUrl: "https://github.com/omkaaaar",
-    image: "/images/work-3.png",
-    highlights: [
-      "Built dynamic product listing and category filtering views.",
-      "Implemented persistent client cart state management.",
-      "Structured mobile-first responsive layouts with Tailwind CSS.",
     ],
   },
 ];

@@ -77,16 +77,17 @@ export default function About() {
       {/* Skills Matrix */}
       <div className="mt-16">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
-          Technical Skills & Technologies
+          Technical Skills &amp; Technologies
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Languages */}
           <div className="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-dark-card">
             <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-3">
-              Frontend Development
+              Languages
             </h4>
             <div className="flex flex-wrap gap-2">
-              {[...skillsData.languages, ...skillsData.frameworks.slice(0, 3)].map((skill) => (
+              {skillsData.languages.map((skill) => (
                 <span
                   key={skill}
                   className="px-3 py-1 text-xs rounded-full bg-indigo-50 dark:bg-primary/10 text-primary dark:text-indigo-300 font-medium border border-indigo-100 dark:border-primary/20"
@@ -97,15 +98,47 @@ export default function About() {
             </div>
           </div>
 
+          {/* Frontend */}
           <div className="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-dark-card">
             <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-3">
-              Backend, Cloud & Tooling
+              Frontend
             </h4>
             <div className="flex flex-wrap gap-2">
-              {[
-                ...skillsData.cloudAndDatabases,
-                ...skillsData.toolsAndPractices,
-              ].map((skill) => (
+              {skillsData.frontend.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 text-xs rounded-full bg-indigo-50 dark:bg-primary/10 text-primary dark:text-indigo-300 font-medium border border-indigo-100 dark:border-primary/20"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Backend & Cloud */}
+          <div className="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-dark-card">
+            <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-3">
+              Backend &amp; Cloud
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {skillsData.backendAndCloud.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-300 font-medium"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Tools */}
+          <div className="p-5 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-dark-card">
+            <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-3">
+              Tools
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {skillsData.tools.map((skill) => (
                 <span
                   key={skill}
                   className="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-300 font-medium"

@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "swap", preload: false });
 
 export const metadata: Metadata = {
   title: "Omkar Kallekar | Full-Stack & Frontend Software Engineer",
@@ -12,6 +12,20 @@ export const metadata: Metadata = {
     "Portfolio of Omkar Kallekar, Associate Software Engineer at Accenture specializing in React, TypeScript, Node.js, and serverless cloud architectures.",
   icons: {
     icon: "/images/profile-img.jpg",
+  },
+  openGraph: {
+    title: "Omkar Kallekar | Full-Stack & Frontend Software Engineer",
+    description:
+      "Portfolio of Omkar Kallekar, Associate Software Engineer at Accenture specializing in React, TypeScript, Node.js, and serverless cloud architectures.",
+    url: "https://omkar-kallekar.vercel.app/",
+    siteName: "Omkar Kallekar Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Omkar Kallekar | Full-Stack & Frontend Software Engineer",
+    description:
+      "Portfolio of Omkar Kallekar, Associate Software Engineer at Accenture specializing in React, TypeScript, Node.js, and serverless cloud architectures.",
   },
 };
 

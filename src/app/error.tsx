@@ -1,0 +1,36 @@
+"use client";
+
+import { useEffect } from "react";
+
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
+
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 text-center bg-white dark:bg-dark">
+      <p className="text-xs uppercase tracking-widest font-bold text-red-500 mb-2">
+        Something went wrong
+      </p>
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white mb-4">
+        Unexpected error
+      </h1>
+      <p className="text-gray-500 dark:text-gray-400 text-sm max-w-sm mb-8">
+        An error occurred while loading this page. Try refreshing — it&apos;s usually temporary.
+      </p>
+      <button
+        onClick={reset}
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white text-sm font-semibold transition-colors shadow-sm"
+      >
+        Try again
+      </button>
+    </div>
+  );
+}
+
