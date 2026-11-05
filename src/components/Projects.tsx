@@ -1,11 +1,20 @@
+"use client";
+
 import { projectsData, personalDetails } from "@/data/portfolioData";
 import ProjectCard from "./ProjectCard";
 import { Github } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-16">
-      <div className="text-center mb-14">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="text-center mb-14"
+      >
         <span className="text-xs uppercase tracking-widest font-bold text-primary dark:text-indigo-400">
           Portfolio
         </span>
@@ -15,15 +24,21 @@ export default function Projects() {
         <p className="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-300 max-w-xl mx-auto">
           A curated selection of production enterprise platforms and full-stack personal projects.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projectsData.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+        {projectsData.map((project, idx) => (
+          <ProjectCard key={project.id} project={project} index={idx} />
         ))}
       </div>
 
-      <div className="text-center mt-12">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+        className="text-center mt-12"
+      >
         <a
           href={personalDetails.socialLinks.github}
           target="_blank"
@@ -33,8 +48,7 @@ export default function Projects() {
           <Github className="w-4 h-4" />
           <span>Explore all open-source repositories on GitHub</span>
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }
-

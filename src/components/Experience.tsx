@@ -1,22 +1,40 @@
+"use client";
+
 import { experienceData } from "@/data/portfolioData";
 import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Experience() {
   return (
     <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto scroll-mt-16">
-      <div className="text-center mb-14">
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="text-center mb-14"
+      >
         <span className="text-xs uppercase tracking-widest font-bold text-primary dark:text-indigo-400">
           Career
         </span>
         <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">
           Work Experience
         </h2>
-      </div>
+      </motion.div>
 
       <div className="space-y-8">
         {experienceData.map((item, index) => (
-          <div
+          <motion.div
             key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.15,
+              ease: [0.21, 0.47, 0.32, 0.98],
+            }}
+            whileHover={{ y: -4, transition: { duration: 0.2, ease: "easeOut" } }}
             className="p-6 md:p-8 rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-dark-card shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-4">
@@ -50,10 +68,9 @@ export default function Experience() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
   );
 }
-

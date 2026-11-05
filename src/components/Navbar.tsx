@@ -1,14 +1,32 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { personalDetails } from "@/data/portfolioData";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Sun, Moon } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    setIsDark(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  const toggleTheme = () => {
+    const nextDark = !isDark;
+    setIsDark(nextDark);
+    if (nextDark) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +84,24 @@ export default function Navbar() {
         </li>
       </ul>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3">
+        {/* Dark Mode Switch */}
+        <button
+          onClick={toggleTheme}
+          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          className="p-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-white/5 hover:border-primary dark:hover:border-primary text-gray-700 dark:text-gray-200 transition-all shadow-sm"
+        >
+          {mounted ? (
+            isDark ? (
+              <Sun className="w-4 h-4 text-amber-400" />
+            ) : (
+              <Moon className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+            )
+          ) : (
+            <span className="w-4 h-4 block" />
+          )}
+        </button>
+
         <a
           href={personalDetails.resumeUrl}
           download
@@ -127,7 +162,27 @@ export default function Navbar() {
               Contact
             </Link>
           </li>
-          <li className="pt-4 border-t border-gray-200 dark:border-gray-800">
+          <li className="pt-4 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between">
+            <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Theme</span>
+            <button
+              onClick={toggleTheme}
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 text-xs text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-white/5"
+            >
+              {mounted && isDark ? (
+                <>
+                  <Sun className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Light</span>
+                </>
+              ) : (
+                <>
+                  <Moon className="w-3.5 h-3.5 text-gray-700 dark:text-gray-300" />
+                  <span>Dark</span>
+                </>
+              )}
+            </button>
+          </li>
+          <li className="pt-2">
             <a
               href={personalDetails.resumeUrl}
               download
@@ -142,4 +197,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

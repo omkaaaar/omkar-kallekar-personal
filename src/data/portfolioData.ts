@@ -27,7 +27,7 @@ export const personalDetails = {
     variant1: {
       headline: "Full-Stack & Frontend Software Engineer",
       subtitle:
-        "I build web applications and cloud services with React, TypeScript, and Node.js—currently engineering internal product platforms at Accenture.",
+        "I build web applications and cloud services with React, TypeScript, and Node.js currently engineering internal product platforms at Accenture.",
     },
     variant2: {
       headline: "Building scalable web applications with React, TypeScript, and Node.js",
@@ -77,7 +77,7 @@ export const experienceData: ExperienceItem[] = [
       "Contributed to core module development for 'Manage My Team', an internal enterprise resource and project management platform.",
       "Designed and built reusable React.js and TypeScript UI component libraries supporting role-based access control (RBAC).",
       "Developed scalable Node.js and TypeScript microservices and implemented an Express.js API Gateway deployed on Google Cloud Run and App Engine.",
-      "Contributed to serverless RESTful APIs using Google Cloud Functions (Gen-2) and Firestore (NoSQL).",
+      "Contributed to serverless RESTful APIs using Google Cloud Functions and Firestore (NoSQL).",
     ],
   },
   {
