@@ -4,29 +4,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { personalDetails } from "@/data/portfolioData";
 import { Menu, X, Download, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDark, setIsDark] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    setIsDark(document.documentElement.classList.contains("dark"));
-  }, []);
-
-  const toggleTheme = () => {
-    const nextDark = !isDark;
-    setIsDark(nextDark);
-    if (nextDark) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    }
-  };
+  const { isDark, toggleTheme, mounted } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,14 +73,32 @@ export default function Navbar() {
         <button
           onClick={toggleTheme}
           aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-          className="p-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-white/5 hover:border-primary dark:hover:border-primary text-gray-700 dark:text-gray-200 transition-all shadow-sm"
+          className="p-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-white/5 hover:border-primary dark:hover:border-primary text-gray-700 dark:text-gray-200 transition-all shadow-sm relative overflow-hidden"
         >
           {mounted ? (
-            isDark ? (
-              <Sun className="w-4 h-4 text-amber-400" />
-            ) : (
-              <Moon className="w-4 h-4 text-gray-700 dark:text-gray-300" />
-            )
+            <AnimatePresence mode="wait" initial={false}>
+              {isDark ? (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: -90, scale: 0.5, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: 90, scale: 0.5, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Sun className="w-4 h-4 text-amber-400" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: 90, scale: 0.5, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: -90, scale: 0.5, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Moon className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+                </motion.div>
+              )}
+            </AnimatePresence>
           ) : (
             <span className="w-4 h-4 block" />
           )}

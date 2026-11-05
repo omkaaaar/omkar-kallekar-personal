@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
+import ThemeContentWrapper from "@/components/ThemeContentWrapper";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: false });
 
@@ -54,11 +56,14 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <ThemeContentWrapper>
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+          </ThemeContentWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );
 }
-
