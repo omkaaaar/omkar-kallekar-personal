@@ -22,7 +22,7 @@ export default function Error({
         Unexpected error
       </h1>
       <p className="text-gray-500 dark:text-gray-400 text-sm max-w-sm mb-8">
-        An error occurred while loading this page. Try refreshing — it&apos;s usually temporary.
+        An error occurred while loading this page. Try refreshing it&apos;s usually temporary.
       </p>
       <button
         onClick={reset}

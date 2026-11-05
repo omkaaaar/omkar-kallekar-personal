@@ -1,13 +1,20 @@
+"use client";
+
 import { ProjectItem } from "@/data/portfolioData";
-import { ExternalLink, Github, ArrowUpRight, FolderGit2 } from "lucide-react";
+import { Github, ArrowUpRight, FolderGit2 } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface ProjectCardProps {
   project: ProjectItem;
+  index?: number;
 }
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="group flex flex-col justify-between rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-dark-card p-6 md:p-7 shadow-sm hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-all duration-300">
+    <motion.article
+      whileHover={{ y: -6, transition: { duration: 0.2, ease: "easeOut" } }}
+      className="group flex flex-col justify-between h-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-dark-card p-6 md:p-7 shadow-sm hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-colors duration-300"
+    >
       <div>
         {/* Top Header: Category & Action Links */}
         <div className="flex items-center justify-between gap-2 mb-4">
@@ -84,6 +91,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 }

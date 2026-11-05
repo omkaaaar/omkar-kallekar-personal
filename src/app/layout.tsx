@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/context/ThemeContext";
+import ThemeContentWrapper from "@/components/ThemeContentWrapper";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", preload: false });
 
@@ -35,13 +37,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const storedTheme = localStorage.getItem('theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                if (storedTheme === 'dark' || (!storedTheme && systemPrefersDark)) {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          <ThemeContentWrapper>
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+          </ThemeContentWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );
 }
-

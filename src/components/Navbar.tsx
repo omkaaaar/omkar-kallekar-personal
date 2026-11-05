@@ -1,14 +1,16 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { personalDetails } from "@/data/portfolioData";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const { isDark, toggleTheme, mounted } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +68,42 @@ export default function Navbar() {
         </li>
       </ul>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3">
+        {/* Dark Mode Switch */}
+        <button
+          onClick={toggleTheme}
+          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          className="p-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-white/5 hover:border-primary dark:hover:border-primary text-gray-700 dark:text-gray-200 transition-all shadow-sm relative overflow-hidden"
+        >
+          {mounted ? (
+            <AnimatePresence mode="wait" initial={false}>
+              {isDark ? (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: -90, scale: 0.5, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: 90, scale: 0.5, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Sun className="w-4 h-4 text-amber-400" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: 90, scale: 0.5, opacity: 0 }}
+                  animate={{ rotate: 0, scale: 1, opacity: 1 }}
+                  exit={{ rotate: -90, scale: 0.5, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Moon className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          ) : (
+            <span className="w-4 h-4 block" />
+          )}
+        </button>
+
         <a
           href={personalDetails.resumeUrl}
           download
@@ -127,7 +164,27 @@ export default function Navbar() {
               Contact
             </Link>
           </li>
-          <li className="pt-4 border-t border-gray-200 dark:border-gray-800">
+          <li className="pt-4 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between">
+            <span className="text-sm text-gray-700 dark:text-gray-300 font-medium">Theme</span>
+            <button
+              onClick={toggleTheme}
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-700 text-xs text-gray-700 dark:text-gray-200 bg-gray-50 dark:bg-white/5"
+            >
+              {mounted && isDark ? (
+                <>
+                  <Sun className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Light</span>
+                </>
+              ) : (
+                <>
+                  <Moon className="w-3.5 h-3.5 text-gray-700 dark:text-gray-300" />
+                  <span>Dark</span>
+                </>
+              )}
+            </button>
+          </li>
+          <li className="pt-2">
             <a
               href={personalDetails.resumeUrl}
               download
@@ -142,4 +199,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
