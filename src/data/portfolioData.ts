@@ -52,19 +52,44 @@ export const personalDetails = {
 };
 
 export const skillsData = {
-  languages: ["TypeScript", "JavaScript", "SQL", "C++"],
-  frontend: ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS"],
-  backendAndCloud: [
+  primary: [
+    "TypeScript",
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Google Cloud Run",
+    "Firestore",
+  ],
+  frontend: [
+    "React.js",
+    "Next.js (App Router)",
+    "TypeScript",
+    "Tailwind CSS",
+    "Redux / Zustand",
+    "Responsive UI/UX",
+  ],
+  backend: [
     "Node.js",
     "Express.js",
-    "REST APIs",
+    "RESTful APIs",
+    "Event-Driven Pub/Sub",
+    "Microservices",
+    "RBAC & Auth",
+  ],
+  cloud: [
     "Google Cloud Run",
     "Cloud Functions",
-    "Firestore",
-    "Pub/Sub",
-    "MongoDB",
+    "App Engine",
+    "Serverless Architecture",
+    "CI/CD Pipelines",
   ],
-  tools: ["Git/GitHub", "CI/CD", "Figma", "VS Code"],
+  databasesAndTools: [
+    "Firestore (NoSQL)",
+    "MongoDB",
+    "SQL (PostgreSQL / MySQL)",
+    "Git & GitHub Workflow",
+    "Figma",
+  ],
 };
 
 export const experienceData: ExperienceItem[] = [
