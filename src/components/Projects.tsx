@@ -10,7 +10,7 @@ export default function Projects() {
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto scroll-mt-16 overflow-hidden">
       <ThrownObject direction="top-left">
         <div className="text-center mb-14">
-          <span className="text-xs uppercase tracking-widest font-bold text-primary dark:text-indigo-400">
+          <span className="text-xs uppercase tracking-widest font-bold text-primary dark:text-[#bdb2ff]">
             Portfolio
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">

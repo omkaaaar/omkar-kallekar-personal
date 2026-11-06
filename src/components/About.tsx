@@ -11,7 +11,7 @@ export default function About() {
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto scroll-mt-16 overflow-hidden">
       <ThrownObject direction="top-left">
         <div className="text-center mb-14">
-          <span className="text-xs uppercase tracking-widest font-bold text-primary dark:text-indigo-400">
+          <span className="text-xs uppercase tracking-widest font-bold text-primary dark:text-[#bdb2ff]">
             Background
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">
@@ -121,7 +121,7 @@ export default function About() {
                 {skillsData.languages.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-xs rounded-full bg-indigo-50 dark:bg-primary/10 text-primary dark:text-indigo-300 font-medium border border-indigo-100 dark:border-primary/20"
+                    className="px-3 py-1 text-xs rounded-full bg-[#bdb2ff]/15 text-[#5c4ec8] dark:text-[#bdb2ff] font-medium border border-[#bdb2ff]/30"
                   >
                     {skill}
                   </span>
@@ -143,7 +143,7 @@ export default function About() {
                 {skillsData.frontend.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-xs rounded-full bg-indigo-50 dark:bg-primary/10 text-primary dark:text-indigo-300 font-medium border border-indigo-100 dark:border-primary/20"
+                    className="px-3 py-1 text-xs rounded-full bg-[#9bf6ff]/15 text-[#0f766e] dark:text-[#9bf6ff] font-medium border border-[#9bf6ff]/30"
                   >
                     {skill}
                   </span>
@@ -165,7 +165,7 @@ export default function About() {
                 {skillsData.backendAndCloud.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-300 font-medium"
+                    className="px-3 py-1 text-xs rounded-full bg-[#caffbf]/25 text-[#166534] dark:text-[#caffbf] font-medium border border-[#caffbf]/35"
                   >
                     {skill}
                   </span>
@@ -187,7 +187,7 @@ export default function About() {
                 {skillsData.tools.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 text-xs rounded-full bg-gray-100 dark:bg-white/10 text-gray-800 dark:text-gray-300 font-medium"
+                    className="px-3 py-1 text-xs rounded-full bg-[#ffd6a5]/25 text-[#9a3412] dark:text-[#ffd6a5] font-medium border border-[#ffd6a5]/35"
                   >
                     {skill}
                   </span>

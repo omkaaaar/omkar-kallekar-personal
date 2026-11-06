@@ -35,7 +35,7 @@ export default function Hero() {
       </ThrownObject>
 
       <ThrownObject direction="right" distance={220} rotation={12} delay={0.06}>
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-primary/10 border border-indigo-100 dark:border-primary/20 text-xs md:text-sm font-medium text-primary dark:text-indigo-300 mb-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#bdb2ff]/15 dark:bg-[#bdb2ff]/15 border border-[#bdb2ff]/30 text-xs md:text-sm font-medium text-primary dark:text-[#bdb2ff] mb-4">
           <span>Associate Software Engineer at Accenture</span>
         </div>
       </ThrownObject>

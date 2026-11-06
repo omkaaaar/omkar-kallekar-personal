@@ -13,13 +13,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <motion.article
       whileHover={{ y: -6, transition: { duration: 0.2, ease: "easeOut" } }}
-      className="group flex flex-col justify-between h-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-dark-card p-6 md:p-7 shadow-sm hover:shadow-md hover:border-primary/50 dark:hover:border-primary/50 transition-colors duration-300"
+      className="group flex flex-col justify-between h-full rounded-2xl border border-gray-200 dark:border-white/10 bg-white dark:bg-dark-card p-6 md:p-7 shadow-sm hover:shadow-md hover:border-primary/50 dark:hover:border-[#bdb2ff]/50 transition-colors duration-300"
     >
       <div>
         {/* Top Header: Category & Action Links */}
         <div className="flex items-center justify-between gap-2 mb-4">
           <div className="flex items-center gap-2">
-            <span className="p-2 rounded-lg bg-indigo-50 dark:bg-primary/10 text-primary">
+            <span className="p-2 rounded-lg bg-[#bdb2ff]/15 text-primary dark:text-[#bdb2ff]">
               <FolderGit2 className="w-4 h-4" />
             </span>
             <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-gray-100 dark:bg-white/10 text-gray-700 dark:text-gray-300">
@@ -45,7 +45,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`Visit live deployment for ${project.title}`}
-                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all"
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-semibold bg-primary/10 text-primary dark:text-[#bdb2ff] hover:bg-primary hover:text-white transition-all"
               >
                 <span>Live</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -71,7 +71,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="space-y-2 mb-6">
           {project.highlights.map((highlight, idx) => (
             <div key={idx} className="flex items-start gap-2 text-xs text-gray-700 dark:text-gray-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-primary dark:bg-[#bdb2ff] mt-1.5 flex-shrink-0" />
               <span className="leading-snug">{highlight}</span>
             </div>
           ))}

@@ -13,8 +13,21 @@
   }
   
   body {
-    @apply bg-white text-gray-900 antialiased selection:bg-indigo-100 selection:text-primary dark:bg-dark dark:text-gray-100;
+    @apply bg-[#fffffc] text-gray-900 antialiased selection:bg-[#bdb2ff]/30 selection:text-primary dark:bg-dark dark:text-[#fffffc];
     transition: background-color 0.25s ease, color 0.25s ease;
     overflow-x: hidden;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(189, 178, 255, 0.1) 0%, transparent 45%),
+      radial-gradient(circle at 85% 85%, rgba(155, 246, 255, 0.09) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(255, 198, 255, 0.06) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  html.dark body {
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(189, 178, 255, 0.14) 0%, transparent 45%),
+      radial-gradient(circle at 85% 85%, rgba(155, 246, 255, 0.1) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(255, 198, 255, 0.07) 0%, transparent 50%);
+    background-attachment: fixed;
   }
 }

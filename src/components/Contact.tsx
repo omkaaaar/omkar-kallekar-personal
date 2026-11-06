@@ -22,7 +22,7 @@ export default function Contact() {
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto scroll-mt-16 overflow-hidden">
       <ThrownObject direction="top-left">
         <div className="text-center mb-14">
-          <span className="text-xs uppercase tracking-widest font-bold text-primary dark:text-indigo-400">
+          <span className="text-xs uppercase tracking-widest font-bold text-primary dark:text-[#bdb2ff]">
             Get In Touch
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">
@@ -42,7 +42,7 @@ export default function Contact() {
             {/* Email row */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-3">
               <div className="flex items-center gap-3 flex-1 min-w-0">
-                <div className="p-2 rounded-lg bg-indigo-50 dark:bg-primary/10 text-primary shrink-0">
+                <div className="p-2 rounded-lg bg-[#bdb2ff]/15 text-primary dark:text-[#bdb2ff] shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <span className="text-sm text-gray-700 dark:text-gray-300 truncate">
@@ -85,7 +85,7 @@ export default function Contact() {
             {/* LinkedIn row */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-3">
               <div className="flex items-center gap-3 flex-1 min-w-0">
-                <div className="p-2 rounded-lg bg-indigo-50 dark:bg-primary/10 text-primary shrink-0">
+                <div className="p-2 rounded-lg bg-[#bdb2ff]/15 text-primary dark:text-[#bdb2ff] shrink-0">
                   <Linkedin className="w-4 h-4" />
                 </div>
                 <span className="text-sm text-gray-700 dark:text-gray-300">LinkedIn Profile</span>
@@ -106,7 +106,7 @@ export default function Contact() {
 
             {/* Location */}
             <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
-              <div className="p-2 rounded-lg bg-indigo-50 dark:bg-primary/10 text-primary shrink-0">
+              <div className="p-2 rounded-lg bg-[#bdb2ff]/15 text-primary dark:text-[#bdb2ff] shrink-0">
                 <MapPin className="w-4 h-4" />
               </div>
               <span>{personalDetails.location}</span>

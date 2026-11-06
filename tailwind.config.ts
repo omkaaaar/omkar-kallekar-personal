@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { colors } from "./src/theme/colors";
 
 const config: Config = {
   content: [
@@ -10,16 +11,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: "#4338ca",
-          hover: "#3730a3",
-          light: "#6366f1",
-        },
-        dark: {
-          DEFAULT: "#1a012e",
-          card: "#260642",
-          surface: "#120120",
-        },
+        primary: colors.primary,
+        dark: colors.dark,
+        light: colors.light,
+        pastel: colors.palette,
       },
       gridTemplateColumns: {
         auto: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -30,4 +25,3 @@ const config: Config = {
 };
 
 export default config;
-

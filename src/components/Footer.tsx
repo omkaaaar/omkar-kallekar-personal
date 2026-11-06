@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-200 dark:border-white/10 py-12 px-4 sm:px-6 lg:px-8 bg-white dark:bg-dark">
+    <footer className="border-t border-[#bdb2ff]/20 dark:border-white/10 py-12 px-4 sm:px-6 lg:px-8 bg-[#fffffc] dark:bg-dark">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
         <div>
           <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -22,7 +22,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
-            className="p-2 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:text-primary hover:border-primary transition-colors"
+            className="p-2 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:text-primary hover:border-primary dark:hover:text-[#bdb2ff] dark:hover:border-[#bdb2ff] transition-colors"
           >
             <Github className="w-4 h-4" />
           </a>
@@ -31,14 +31,14 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
-            className="p-2 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:text-primary hover:border-primary transition-colors"
+            className="p-2 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:text-primary hover:border-primary dark:hover:text-[#bdb2ff] dark:hover:border-[#bdb2ff] transition-colors"
           >
             <Linkedin className="w-4 h-4" />
           </a>
           <a
             href={`mailto:${personalDetails.email}`}
             aria-label="Send Email"
-            className="p-2 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:text-primary hover:border-primary transition-colors"
+            className="p-2 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-400 hover:text-primary hover:border-primary dark:hover:text-[#bdb2ff] dark:hover:border-[#bdb2ff] transition-colors"
           >
             <Mail className="w-4 h-4" />
           </a>

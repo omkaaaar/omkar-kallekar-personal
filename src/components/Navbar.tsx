@@ -32,7 +32,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between ${
         isScrolled
-          ? "bg-white/80 dark:bg-dark/80 backdrop-blur-md shadow-sm border-b border-gray-200/50 dark:border-white/10"
+          ? "bg-[#fffffc]/80 dark:bg-dark/80 backdrop-blur-md shadow-sm border-b border-[#bdb2ff]/20 dark:border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -73,7 +73,7 @@ export default function Navbar() {
         <button
           onClick={toggleTheme}
           aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-          className="p-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-white/5 hover:border-primary dark:hover:border-primary text-gray-700 dark:text-gray-200 transition-all shadow-sm relative overflow-hidden"
+          className="p-2 rounded-full border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-white/5 hover:border-primary dark:hover:border-[#bdb2ff] text-gray-700 dark:text-gray-200 transition-all shadow-sm relative overflow-hidden"
         >
           {mounted ? (
             <AnimatePresence mode="wait" initial={false}>
@@ -107,7 +107,7 @@ export default function Navbar() {
         <a
           href={personalDetails.resumeUrl}
           download
-          className="hidden sm:inline-flex items-center gap-2 px-5 py-2 text-xs md:text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary transition-all text-gray-700 dark:text-gray-200 bg-white/50 dark:bg-transparent"
+          className="hidden sm:inline-flex items-center gap-2 px-5 py-2 text-xs md:text-sm font-medium border border-gray-300 dark:border-gray-700 rounded-full hover:border-primary hover:text-primary dark:hover:border-[#bdb2ff] dark:hover:text-[#bdb2ff] transition-all text-gray-700 dark:text-gray-200 bg-white/50 dark:bg-transparent"
         >
           <span>Resume</span>
           <Download className="w-4 h-4" />
