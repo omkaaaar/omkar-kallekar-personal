@@ -162,5 +162,29 @@ export const projectsData: ProjectItem[] = [
       "Integrated asynchronous messaging workflows using Google Pub/Sub for background tasks.",
     ],
   },
+  {
+    id: "sushi-ui",
+    title: "Sushi Restaurant UI",
+    category: "Frontend",
+    summary:
+      "A modern, mobile-first responsive web experience designed for a Japanese culinary brand featuring aesthetic layouts and smooth navigation.",
+    description:
+      "Designed and developed a responsive sushi brand landing page utilizing semantic HTML5, CSS Grid, and vanilla JavaScript. Features fluid layout adaptations, mobile drawer navigation, and interactive hover effects.",
+    stack: [
+      "HTML5",
+      "CSS3 (Grid & Flexbox)",
+      "JavaScript (ES6+)",
+      "Responsive Design",
+      "Vercel",
+    ],
+    role: "Frontend Designer & Developer",
+    liveUrl: "https://sushi-site-nu.vercel.app/",
+    repoUrl: "https://github.com/omkaaaar/sushi",
+    image: "/images/work-3.png",
+    highlights: [
+      "Engineered mobile-first responsive layouts with CSS Grid & Flexbox ensuring seamless cross-device compatibility.",
+      "Implemented smooth navigation transitions, interactive menu hover animations, and clean semantic architecture with vanilla JavaScript.",
+    ],
+  },
 ];
 
