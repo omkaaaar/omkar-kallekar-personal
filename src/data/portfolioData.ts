@@ -46,7 +46,7 @@ export const personalDetails = {
   resumeUrl: "/images/omkar-kallekar-resume.pdf",
   socialLinks: {
     github: "https://github.com/omkaaaar",
-    linkedin: "https://linkedin.com/in/omkar-kallekar",
+    linkedin: "https://www.linkedin.com/in/omkarkallekar/",
     devpost: "https://devpost.com",
   },
 };
